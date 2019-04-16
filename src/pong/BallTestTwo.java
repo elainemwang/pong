@@ -9,6 +9,7 @@ import java.awt.Graphics2D;
 import java.awt.Canvas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.System.out;
 
 class BallTestTwo extends Canvas implements Runnable {
 
@@ -19,6 +20,7 @@ class BallTestTwo extends Canvas implements Runnable {
         setVisible(true);
 
         //instantiate a new Ball
+        ball = new Ball(100, 100, 30, 50, Color.BLUE, 5, 5);
         //test the Ball thoroughly
         //test all constructors
         new Thread(this).start();
@@ -31,13 +33,15 @@ class BallTestTwo extends Canvas implements Runnable {
     public void paint(Graphics window) {
         ball.moveAndDraw(window);
 
-        if (!(ball.getX() >= 10 && ball.getX() <= 550)) {
-            ball.setXSpeed(-ball.getXSpeed());
+        
+        if (!(ball.getX() >= 5 && ball.getX() <= 770)) {
+            ball.setxSpeed(-ball.getxSpeed());
         }
 
-        if (!(ball.getY() >= 10 && ball.getY() <= 450)) {
-            ball.setYSpeed(-ball.getYSpeed());
+        if (!(ball.getY() >= 5 && ball.getY() <= 525)) {
+            ball.setySpeed(-ball.getySpeed());
         }
+        
     }
 
     public void run() {

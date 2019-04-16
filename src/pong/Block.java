@@ -16,7 +16,9 @@ public class Block implements Locatable {
     private Color color;
 
     public Block() {
-
+        setPos(100,150);
+        width = 10;
+        height = 10;
     }
 
     //add other Block constructors - x , y , width, height, color
@@ -31,6 +33,12 @@ public class Block implements Locatable {
         setPos(x,y);
         width = w;
         height = h;
+    }
+    
+    public Block(int x, int y){
+        setPos(x,y);
+        width = 10;
+        height = 10;
     }
     
     //add the other set methods
@@ -62,7 +70,8 @@ public class Block implements Locatable {
     }
 
     public void draw(Graphics window, Color col) {
-        
+        window.setColor(col);
+        window.fillRect(getX(), getY(), getWidth(), getHeight());
     }
 
     public boolean equals(Object obj) {
