@@ -43,6 +43,7 @@ public class Paddle extends Block {
     public void moveUpAndDraw(Graphics window) {
         window.setColor(Color.WHITE);
         window.fillRect(getX(), getY(), getWidth(), getHeight());
+        
         setY(getY() - getSpeed());
         
         window.setColor(getColor());
@@ -52,6 +53,7 @@ public class Paddle extends Block {
     public void moveDownAndDraw(Graphics window) {
         window.setColor(Color.WHITE);
         window.fillRect(getX(), getY(), getWidth(), getHeight());
+        
         setY(getY() + getSpeed());
         
         window.setColor(getColor());

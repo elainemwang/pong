@@ -34,6 +34,7 @@ class BallTestTwo extends Canvas implements Runnable {
         ball.moveAndDraw(window);
 
         
+        
         if (!(ball.getX() >= 5 && ball.getX() <= 770)) {
             ball.setxSpeed(-ball.getxSpeed());
         }
